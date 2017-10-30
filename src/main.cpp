@@ -1,6 +1,5 @@
 #include <QApplication>
 #include <QQmlApplicationEngine>
-#include <QMessageBox>
 
 int main(int argc, char** argv)
 {
