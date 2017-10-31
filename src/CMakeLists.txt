@@ -10,10 +10,6 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
-if(CMAKE_BUILD_TYPE MATCHES Debug)
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DQT_QML_DEBUG -DQT_DECLARATIVE_DEBUG")
-endif()
-
 
 set(PROJECT "MinimalQml")
 
@@ -31,7 +27,6 @@ endif()
 
 source_group("Header Files" FILES ${HEADERS})
 source_group("Source Files" FILES ${SOURCES})
-
 
 add_executable(${PROJECT} ${HEADERS} ${SOURCES} ${QT_RESOURCES})
 
