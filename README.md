@@ -308,35 +308,35 @@ After the successful build the binary `MinimalQml` will end up in `build/src/`.
 
 Go to the *Welcome* tab *(1)* in the main window and select *Open Project* *(2)*.
 
-![Qt Creator Welcome Page](https://github.com/apriorit/MinimalQml/blob/master/img/qt101.png|width=406)
+![Qt Creator Welcome Page](https://github.com/apriorit/MinimalQml/blob/master/img/qt101.png)
 
 In the opened dialog locate the `CMakeLists.txt` file in the root directory of the 
 project.
 
-![Opening Project File](https://github.com/apriorit/MinimalQml/blob/master/img/qt102.png|width=406)
+![Opening Project File](https://github.com/apriorit/MinimalQml/blob/master/img/qt102.png)
 
 After that select the version of the *Qt framework* that will be used for 
 compiling the project. In case there are multiple frameworks installed in the 
 system it is possible to select several of them.
 
-![Selecting Qt Frameworks](https://github.com/apriorit/MinimalQml/blob/master/img/qt103.png|width=406)
+![Selecting Qt Frameworks](https://github.com/apriorit/MinimalQml/blob/master/img/qt103.png)
 
 After opening the project its directory structure will be visible in the *Projects* 
 panel in Qt Creator.
 
-![Opened Qt Project](https://github.com/apriorit/MinimalQml/blob/master/img/qt104.png|width=406)
+![Opened Qt Project](https://github.com/apriorit/MinimalQml/blob/master/img/qt104.png)
 
 The C++ source files are treated as usual by the editor.
 
-![Editing C++ File](https://github.com/apriorit/MinimalQml/blob/master/img/qt105.png|width=406)
+![Editing C++ File](https://github.com/apriorit/MinimalQml/blob/master/img/qt105.png)
 
 QRC resource files are opened as a resource tree.
 
-![Opened QRC Resource File](https://github.com/apriorit/MinimalQml/blob/master/img/qt106.png|width=406)
+![Opened QRC Resource File](https://github.com/apriorit/MinimalQml/blob/master/img/qt106.png)
 
 From the resource tree it is possible to open QML files of the project.
 
-![Editing QML File](https://github.com/apriorit/MinimalQml/blob/master/img/qt107.png|width=406)
+![Editing QML File](https://github.com/apriorit/MinimalQml/blob/master/img/qt107.png)
 
 ## Links
 
