@@ -43,8 +43,20 @@ sudo apt-get install -y \
 
 The following instructions are applied to these operating systems:
 
-* CentOS 7
 * Fedora >=22
+
+```
+sudo dnf groupinstall -y "Development Tools"
+sudo dnf install -y \
+    cmake \
+    gcc-c++ \
+    qt5-qtbase-devel \
+    qt5-qtdeclarative-devel \
+    qt5-qtquickcontrols \
+    qt5-qtquickcontrols2-devel
+```
+
+* CentOS 7
 
 ```
 sudo yum groupinstall -y "Development Tools"
@@ -287,9 +299,9 @@ target_link_libraries(${PROJECT}
 
 ## Building Project
 
-The program is build with the commands below. The cmake required the directory 
+The program is built with the commands below. CMake requires the directory 
 with the main project's `CMakeLists.txt` file as an argument. Then the CMake 
-creates the build files for the GNU make which builds an executable.
+creates the build files for the GNU make which build an executable.
 
 ```
 cd <PathToProject>
