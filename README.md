@@ -99,7 +99,7 @@ its individual sub-directory and `CMakeLists.txt` file within.
 Start with declarative file for user interface that is specified in the file 
 `src/main.qml`. The code creates a small window without any controls.
 
-[src/main.qml](https://github.com/apriorit/MinimalQml/blob/master/src/main.qml)
+[src/main.qml](src/main.qml)
 
 Necessary modules are imported. The exact version of the `QtQuick` library is not 
 the same as the version of the Qt framework used. `QtQuick.Controls` library 
@@ -136,17 +136,17 @@ title: qsTr("Minimal Qml")
 This is the QML resource file for the application that consists of sole QML file 
 named `main.qml`. The file is XML with `RCC` element as root and `qresource` as 
 element for group of resources. This project contains only one group that is the 
-root (i.e. `/`). Larger projects may contain additional qresource elements for 
+root (i.e. `/`). Larger projects may contain additional `qresource` elements for 
 each resource subgroup (e.g. `customControls`, `customWindows`, etc.).
 
-[src/qml.qrc](https://github.com/apriorit/MinimalQml/blob/master/src/qml.qrc)
+[src/qml.qrc](src/qml.qrc)
 
 ## Application Code
 
 The main entry point of the application provides the C++ code for displaying Qt 
 Quick user interface.
 
-[src/main.qml](https://github.com/apriorit/MinimalQml/blob/master/src/main.cpp)
+[src/main.qml](src/main.cpp)
 
 Standard object for Qt application is constructed.
 
@@ -178,14 +178,14 @@ format.
 
 This is the main project file. The first line sets the minimum version of CMake 
 for the project. It includes Qt5 framework into the application and concludes 
-with the further inclusion of the src subdirectory so that CMake would search 
+with the further inclusion of the `src` subdirectory so that CMake would search 
 for the project file (`CMakeLists.txt`) there.
 
-[CMakeLists.tst](CMakeLists.txt)
+[CMakeLists.txt](CMakeLists.txt)
 
 This is the project file for the executable.
 
-[src/CMakeLists.tst](src/CMakeLists.txt)
+[src/CMakeLists.txt](src/CMakeLists.txt)
 
 The header files of the Qt project should be included into the project so that 
 makefiles generated will have them specified in the corresponding compilation 
@@ -213,7 +213,7 @@ qt5_add_resources(QT_RESOURCES qml.qrc)
 ```
 
 For Qt projects with graphical user interface the compiler should receive 
-special parameters for compilcation
+special parameters for compilation
 
 ```
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${Qt5Widgets_EXECUTABLE_COMPILE_FLAGS}")
