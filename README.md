@@ -181,11 +181,11 @@ for the project. It includes Qt5 framework into the application and concludes
 with the further inclusion of the src subdirectory so that CMake would search 
 for the project file (`CMakeLists.txt`) there.
 
-[CMakeLists.tst](https://github.com/apriorit/MinimalQml/blob/master/CMakeLists.txt)
+[CMakeLists.tst](CMakeLists.txt)
 
 This is the project file for the executable.
 
-[src/CMakeLists.tst](https://github.com/apriorit/MinimalQml/blob/master/src/CMakeLists.txt)
+[src/CMakeLists.tst](src/CMakeLists.txt)
 
 The header files of the Qt project should be included into the project so that 
 makefiles generated will have them specified in the corresponding compilation 
