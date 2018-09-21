@@ -33,6 +33,7 @@ install pre-compiled packages from standard repositories.
 
 The following instructions apply to:
 
+* Ubuntu 18.04
 * Ubuntu 16.04
 * Debian 9
 
@@ -42,7 +43,6 @@ sudo apt-get install -y \
     cmake qtbase5-dev \
     qtdeclarative5-dev \
     qml-module-qtquick2 \
-    qtquickcontrols2-5-dev \
     qml-module-qtquick-controls
 ```
 
