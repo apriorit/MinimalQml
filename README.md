@@ -15,9 +15,6 @@ the unified file format and is able to generate makefiles, Visual Studio
 solutions, and projects for many other build systems from the same project file.
 You can check out some [CMake examples](https://cmake.org/examples/) on the official website if you want to learn more.
 
-As an added bonus, there is a series of simple Qt applications using a low-level graphics library OpenGL available at
-[github.com/Postrediori/MinimalOpenGlQml](https://github.com/Postrediori/MinimalOpenGlQml.git).
-
 ## Prerequisites
 
 In order to develop an application using CMake with Qt QML,
