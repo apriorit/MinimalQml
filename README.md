@@ -37,7 +37,8 @@ The following instructions apply to:
 ```
 sudo apt-get install -y \
     build-essential \
-    cmake qtbase5-dev \
+    cmake \
+    qtbase5-dev \
     qtdeclarative5-dev \
     qml-module-qtquick2 \
     qml-module-qtquick-controls
@@ -50,29 +51,24 @@ The following instructions apply to:
 * Fedora 22 and higher
 
 ```
-sudo dnf groupinstall -y \
-    "Development Tools" \
-    "Development Libraries"
 sudo dnf install -y \
+    gcc gcc-c++ make \
     cmake \
-    gcc-c++ \
+    qt5-qtquickcontrols \
     qt5-qtbase-devel \
     qt5-qtdeclarative-devel \
-    qt5-qtquickcontrols \
     qt5-qtquickcontrols2-devel
 ```
 
 * CentOS 7
 
 ```
-sudo yum groupinstall -y \
-    "Development Tools" \
-    "Development Libraries"
 sudo yum install -y \
+    gcc gcc-c++ make \
     cmake \
+    qt5-qtquickcontrols \
     qt5-qtbase-devel \
     qt5-qtdeclarative-devel \
-    qt5-qtquickcontrols \
     qt5-qtquickcontrols2-devel
 ```
 
