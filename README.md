@@ -15,6 +15,8 @@ the unified file format and is able to generate makefiles, Visual Studio
 solutions, and projects for many other build systems from the same project file.
 You can check out some [CMake examples](https://cmake.org/examples/) on the official website if you want to learn more.
 
+Qt6 version in a separate branch: https://github.com/apriorit/MinimalQml/tree/qt6
+
 ## Prerequisites
 
 In order to develop an application using CMake with Qt QML,
