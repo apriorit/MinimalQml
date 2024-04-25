@@ -26,6 +26,25 @@ install pre-compiled packages from standard repositories.
 
 ## Environment Setup
 
+### Debian-based Systems
+
+The following instructions apply to:
+
+* Ubuntu 22.04 and later
+
+```
+sudo apt-get install -y \
+    build-essential \
+    cmake \
+    libgl1-mesa-dev \
+    qt6-base-dev qt6-declarative-dev \
+    qml6-module-qtqml-workerscript \
+    qml6-module-qtquick \
+    qml6-module-qtquick-controls \
+    qml6-module-qtquick-templates \
+    qml6-module-qtquick-window
+```
+
 ### RedHat-based Systems
 
 The following instructions apply to:
