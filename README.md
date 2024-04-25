@@ -26,50 +26,18 @@ install pre-compiled packages from standard repositories.
 
 ## Environment Setup
 
-### Debian-based Systems
-
-The following instructions apply to:
-
-* Ubuntu 18.04
-* Ubuntu 16.04
-* Debian 9
-
-```
-sudo apt-get install -y \
-    build-essential \
-    cmake \
-    qtbase5-dev \
-    qtdeclarative5-dev \
-    qml-module-qtquick2 \
-    qml-module-qtquick-controls
-```
-
 ### RedHat-based Systems
 
 The following instructions apply to:
 
-* Fedora 22 and higher
+* Fedora 38 and higher
 
 ```
 sudo dnf install -y \
     gcc gcc-c++ make \
     cmake \
-    qt5-qtquickcontrols \
-    qt5-qtbase-devel \
-    qt5-qtdeclarative-devel \
-    qt5-qtquickcontrols2-devel
-```
-
-* CentOS 7
-
-```
-sudo yum install -y \
-    gcc gcc-c++ make \
-    cmake \
-    qt5-qtquickcontrols \
-    qt5-qtbase-devel \
-    qt5-qtdeclarative-devel \
-    qt5-qtquickcontrols2-devel
+    qt6-qtbase-devel \
+    qt6-qtdeclarative-devel
 ```
 
 ## Directory Structure
@@ -106,8 +74,8 @@ the same as the version of the Qt framework used. `QtQuick.Controls` library
 contains some basic controls for the user interface.
 
 ```
-import QtQuick 2.0
-import QtQuick.Controls 1.0
+import QtQuick 6.0
+import QtQuick.Controls 6.0
 ```
 
 Main application window is represented with the `ApplicationWindow` control in the 
@@ -177,7 +145,7 @@ Now we’ll show you how to deploy a Qt Quick application using the CMake projec
 format.
 
 Let’s look at the main project file. The first line sets the minimum version of CMake 
-for the project. It then includes the Qt5 framework into the application 
+for the project. It then includes the Qt6 framework into the application 
 as well as the `src` subdirectory so that CMake will search 
 for the project file (`CMakeLists.txt`) there.
 
@@ -189,38 +157,38 @@ This is the project file for the executable:
 
 The header files of the Qt project should be included into the project so that the
 makefiles generated will specify them in the corresponding compilation 
-commands. There Qt5Widgets stands the header files for the Qt Framework and 
+commands. There Qt6Widgets stands the header files for the Qt Framework and 
 QtQml invokes special files for QML functions.
 
 ```
-include_directories(${Qt5Widgets_INCLUDE_DIRS} ${QtQml_INCLUDE_DIRS})
+include_directories(${Qt6Widgets_INCLUDE_DIRS} ${QtQml_INCLUDE_DIRS})
 ```
 
 The definitions as well as the Qt include files should be specified in the makefile 
 compilation commands.
 
 ```
-add_definitions(${Qt5Widgets_DEFINITIONS} ${QtQml_DEFINITIONS}
-                ${${Qt5Quick_DEFINITIONS}})
+add_definitions(${Qt6Widgets_DEFINITIONS} ${QtQml_DEFINITIONS}
+                ${${Qt6Quick_DEFINITIONS}})
 ```
 
 The Qt framework requires the code to be created from the Qt resource files. 
-This is achieved using the special `qt5_add_resources` command. The QML resource 
+This is achieved using the special `qt6_add_resources` command. The QML resource 
 file path relative to this file is passed as an argument:
 
 ```
-qt5_add_resources(QT_RESOURCES qml.qrc)
+qt6_add_resources(QT_RESOURCES qml.qrc)
 ```
 
 For Qt projects with graphical user interface, the compiler should receive 
 special parameters in order to compile:
 
 ```
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${Qt5Widgets_EXECUTABLE_COMPILE_FLAGS}")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${Qt6Widgets_EXECUTABLE_COMPILE_FLAGS}")
 ```
 
-Qt programs require several additional compilation steps for [moc](https://doc.qt.io/qt-5/moc.html),
-[rcc](https://doc.qt.io/qt-5/rcc.html) and [uic](https://doc.qt.io/qt-5/uic.html). 
+Qt programs require several additional compilation steps for [moc](https://doc.qt.io/qt-6/moc.html),
+[rcc](https://doc.qt.io/qt-6/rcc.html) and [uic](https://doc.qt.io/qt-6/uic.html). 
 
 ```
 set(CMAKE_AUTOMOC ON)
@@ -248,7 +216,7 @@ very strict compilation rules and help to detect and locate a lot of
 potential issues during compilation.
 
 ```
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Werror -std=c++11 
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Werror 
     -fstrict-aliasing -pedantic-errors -pedantic -Wno-deprecated-declarations 
     -Wno-unused-variable")
 ```
@@ -294,9 +262,9 @@ Qt framework libraries.
 
 ```
 target_link_libraries(${PROJECT}
-    Qt5::Widgets
-    Qt5::Qml
-    Qt5::Quick
+    Qt6::Widgets
+    Qt6::Qml
+    Qt6::Quick
     )
 ```
 
@@ -363,9 +331,10 @@ From the resource tree, you can open QML files for the project.
 ## Links
 
 * Qt Documentation 
-  * [Qt QML](https://doc.qt.io/qt-5/qtqml-index.html)
-  * [Qt Quick](https://doc.qt.io/qt-5/qtquick-index.html)
-  * [QML Applications](https://doc.qt.io/qt-5/qmlapplications.html)
+  * [Qt QML](https://doc.qt.io/qt-6/qtqml-index.html)
+  * [Qt Quick](https://doc.qt.io/qt-6/qtquick-index.html)
+  * [Qt Quick Controls](https://doc.qt.io/qt-6/qtquickcontrols-index.html)
+  * [QML Applications](https://doc.qt.io/qt-6/qmlapplications.html)
 * CMake
   * [CMake Documentation](https://cmake.org/documentation/)
   * [CMake Tutorial](https://cmake.org/cmake-tutorial/)
