@@ -15,7 +15,7 @@ the unified file format and is able to generate makefiles, Visual Studio
 solutions, and projects for many other build systems from the same project file.
 You can check out some [CMake examples](https://cmake.org/examples/) on the official website if you want to learn more.
 
-Qt6 version in a separate branch: https://github.com/apriorit/MinimalQml/tree/qt6
+Qt5 version in a separate branch: https://github.com/apriorit/MinimalQml/tree/qt5
 
 ## Prerequisites
 
@@ -32,7 +32,7 @@ install pre-compiled packages from standard repositories.
 
 The following instructions apply to:
 
-* Ubuntu 22.04 and later
+* Debian and Ubuntu
 
 ```
 sudo apt-get install -y \
@@ -51,7 +51,7 @@ sudo apt-get install -y \
 
 The following instructions apply to:
 
-* Fedora 38 and higher
+* Fedora
 
 ```
 sudo dnf install -y \
